@@ -1,6 +1,6 @@
 // src/components/BookList.jsx
 import React, { useEffect, useState } from 'react';
-import './BookList.css';
+import './Booklist.css';
 
 
 function BookList({ searchQuery = '' }) {
