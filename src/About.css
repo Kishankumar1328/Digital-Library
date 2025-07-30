@@ -1,0 +1,200 @@
+.about-container {
+  max-width: 1000px;
+  margin: 40px auto;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  padding: 60px 50px;
+  font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Arial, sans-serif;
+  color: #1f2937;
+  line-height: 1.7;
+  box-sizing: border-box;
+}
+
+.about-container h1 {
+  color: #2563eb;
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 40px;
+  font-weight: 700;
+  background: linear-gradient(135deg, #2563eb 0%, #3b82f6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.about-container section {
+  margin-bottom: 40px;
+}
+
+.about-container h2 {
+  color: #1e40af;
+  font-size: 1.6rem;
+  margin-bottom: 20px;
+  font-weight: 600;
+  border-bottom: 2px solid #e0e7ff;
+  padding-bottom: 8px;
+  position: relative;
+}
+
+.about-container h2::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 60px;
+  height: 2px;
+  background: linear-gradient(90deg, #2563eb, #3b82f6);
+}
+
+.about-container p {
+  font-size: 1.125rem;
+  margin-bottom: 24px;
+  color: #374151;
+  text-align: justify;
+}
+
+.intro-section p {
+  font-size: 1.2rem;
+  color: #4b5563;
+  text-align: center;
+  font-style: italic;
+  background: #f8fafc;
+  padding: 30px;
+  border-radius: 12px;
+  border-left: 4px solid #2563eb;
+}
+
+.about-features,
+.about-contact {
+  padding-left: 0;
+  margin-bottom: 24px;
+}
+
+.about-features li,
+.about-contact li {
+  font-size: 1.1rem;
+  margin-bottom: 12px;
+  list-style: none;
+  color: #1e40af;
+  position: relative;
+  padding-left: 30px;
+}
+
+.about-features li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: #10b981;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.about-contact li::before {
+  content: '●';
+  position: absolute;
+  left: 0;
+  color: #2563eb;
+  font-size: 1.2rem;
+}
+
+.about-contact li strong {
+  color: #1f2937;
+  margin-right: 8px;
+}
+
+.about-container a {
+  color: #2563eb;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  border-bottom: 1px solid transparent;
+}
+
+.about-container a:hover {
+  color: #1d4ed8;
+  border-bottom-color: #1d4ed8;
+}
+
+.features-section {
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+  padding: 30px;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+}
+
+.mission-section {
+  background: linear-gradient(135deg, #fef7ff 0%, #f3e8ff 100%);
+  padding: 30px;
+  border-radius: 12px;
+  border: 1px solid #e9d5ff;
+}
+
+.technology-section {
+  background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+  padding: 30px;
+  border-radius: 12px;
+  border: 1px solid #bbf7d0;
+}
+
+.contact-section {
+  background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%);
+  padding: 30px;
+  border-radius: 12px;
+  border: 1px solid #fde68a;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .about-container {
+    margin: 20px;
+    padding: 40px 30px;
+  }
+
+  .about-container h1 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+  }
+
+  .about-container h2 {
+    font-size: 1.4rem;
+    margin-bottom: 16px;
+  }
+
+  .about-container p,
+  .about-features li,
+  .about-contact li {
+    font-size: 1rem;
+  }
+
+  .intro-section p {
+    font-size: 1.1rem;
+    padding: 20px;
+  }
+
+  .about-container section {
+    margin-bottom: 30px;
+  }
+
+  .features-section,
+  .mission-section,
+  .technology-section,
+  .contact-section {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-container {
+    margin: 10px;
+    padding: 30px 20px;
+  }
+
+  .about-container h1 {
+    font-size: 1.8rem;
+  }
+
+  .about-container h2 {
+    font-size: 1.3rem;
+  }
+}

@@ -1,0 +1,361 @@
+.booklist-wrapper {
+  width: 100%;
+}
+
+.top-right {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  padding: 0 24px;
+  margin-bottom: 8px;
+  box-sizing: border-box;
+}
+
+.add-btn {
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: 600;
+  background-color: #2563eb;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.add-btn:hover {
+  background-color: #1d4ed8;
+  transform: translateY(-2px);
+}
+
+.body {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+  gap: 32px;
+  padding: 16px 24px;
+  background-color: #f5f7fa;
+  min-height: calc(100vh - 70px);
+}
+
+.cart {
+  width: 350px;
+  height: 300px;
+  padding: 20px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #4f98f0 0%, #3b82f6 100%);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+/* Wishlist icon styles for book cards */
+.wishlist-icon-container {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  z-index: 2;
+}
+
+.wishlist-icon {
+  background: rgba(255, 255, 255, 0.9);
+  color: #6b7280;
+  border: none;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.wishlist-icon:hover {
+  background: white;
+  transform: scale(1.1);
+  color: #ef4444;
+}
+
+.wishlist-icon.in-wishlist {
+  background: #ef4444;
+  color: white;
+}
+
+.wishlist-icon.in-wishlist:hover {
+  background: #dc2626;
+}
+
+.cart::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
+  pointer-events: none;
+}
+
+.cart:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
+}
+
+.cart h2 {
+  margin: 8px 0 4px;
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-align: center;
+  line-height: 1.3;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+}
+
+.cart h3 {
+  margin: 0 0 16px;
+  color: #e0e7ff;
+  font-size: 0.9rem;
+  font-weight: 400;
+  text-align: center;
+}
+
+.cart p {
+  color: #f1f5ff;
+  font-size: 0.85rem;
+  text-align: center;
+  margin: 4px 0;
+}
+
+.download-btn {
+  width: 120px;
+  height: 36px;
+  border-radius: 20px;
+  background-color: #ffffff;
+  color: #2563eb;
+  font-size: 14px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease;
+}
+
+.download-btn:hover {
+  background-color: #f1f5f9;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.no-results {
+  width: 100%;
+  text-align: center;
+  padding: 60px 20px;
+  color: #64748b;
+  font-size: 1.1rem;
+}
+
+.search-results-info {
+  width: 100%;
+  text-align: center;
+  padding: 16px 20px;
+  background: rgba(59, 130, 246, 0.1);
+  border-radius: 8px;
+  margin-bottom: 20px;
+  color: #1e40af;
+  font-weight: 500;
+}
+
+.search-suggestion {
+  color: #9ca3af;
+  font-style: italic;
+  margin-top: 8px;
+}
+
+/* Add Book Form Styles */
+.add-book-form {
+  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 32px;
+  margin: 20px 24px;
+  box-shadow: 0 8px 25px rgba(37, 99, 235, 0.1);
+  backdrop-filter: blur(10px);
+  position: relative;
+  overflow: hidden;
+}
+
+.add-book-form::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #4f98f0 0%, #3b82f6 50%, #2563eb 100%);
+}
+
+.add-book-form h3 {
+  margin: 0 0 28px 0;
+  color: #1e293b;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #2563eb 0%, #4f98f0 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #374151;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 14px 16px;
+  border: 2px solid #e5e7eb;
+  border-radius: 12px;
+  font-size: 16px;
+  background: #ffffff;
+  box-sizing: border-box;
+  transition: all 0.2s ease;
+  font-family: inherit;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.1);
+  background: #fafbff;
+}
+
+.form-group input::placeholder {
+  color: #9ca3af;
+  font-style: italic;
+}
+
+.form-buttons {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  margin-top: 32px;
+}
+
+.submit-btn {
+  background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+  color: white;
+  border: none;
+  padding: 14px 32px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
+  min-width: 120px;
+}
+
+.submit-btn:hover:not(:disabled) {
+  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(37, 99, 235, 0.3);
+}
+
+.submit-btn:disabled {
+  background: #9ca3af;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.cancel-btn {
+  background: #ffffff;
+  color: #6b7280;
+  border: 2px solid #e5e7eb;
+  padding: 12px 32px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  min-width: 120px;
+}
+
+.cancel-btn:hover {
+  background: #f9fafb;
+  border-color: #d1d5db;
+  color: #374151;
+  transform: translateY(-1px);
+}
+
+@media (max-width: 768px) {
+  .body {
+    padding: 20px 16px;
+    gap: 24px;
+  }
+
+  .cart {
+    width: 280px;
+    height: 260px;
+    padding: 16px;
+  }
+
+  .add-book-form {
+    margin: 20px 16px;
+    padding: 24px 20px;
+  }
+
+  .add-book-form h3 {
+    font-size: 1.3rem;
+    margin-bottom: 24px;
+  }
+
+  .form-buttons {
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .submit-btn,
+  .cancel-btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .body {
+    padding: 16px 12px;
+  }
+
+  .cart {
+    width: 100%;
+    max-width: 280px;
+  }
+
+  .add-book-form {
+    margin: 16px 12px;
+    padding: 20px 16px;
+  }
+
+  .form-group input {
+    padding: 12px 14px;
+    font-size: 16px; /* Prevent zoom on iOS */
+  }
+}

@@ -1,0 +1,30 @@
+.App {
+  background-color: #f5f7fa;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.home-content {
+  text-align: center;
+  padding: 40px 20px;
+  background: #f5f7fa;
+  min-height: calc(100vh - 70px);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding-top: 120px;
+}
+
+.home-content h1 {
+  color: #2563eb;
+  font-size: 2.5rem;
+  margin-bottom: 16px;
+  font-weight: 700;
+}
+
+.home-content p {
+  color: #64748b;
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+}
